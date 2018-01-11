@@ -3,11 +3,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.selenium</groupId>
-	<artifactId>module52</artifactId>
+	<artifactId>module62</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>module52</name>
+	<name>module62</name>
 	<url>http://maven.apache.org</url>
 
 	<properties>

@@ -1,8 +1,9 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="Module 5.1">
+<suite name="Module 6.2 Design Patterns">
 	<test name="Flights" preserve-order="true">
 		<classes>
-			<class name="com.selenium.module51.FindFlightsTest"/>			
+			<class name="com.selenium.module62.FindFlightsUsingFactoryPattern"/>
+			<class name="com.selenium.module62.FindFlightsUsingSingltonPatternTest"/>			
 		</classes>
 	</test>
 </suite>
