@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Module 5.1">
+	<test name="Flights" preserve-order="true">
+		<classes>
+			<class name="com.selenium.module51.FindFlightsTest"/>			
+		</classes>
+	</test>
+</suite>
