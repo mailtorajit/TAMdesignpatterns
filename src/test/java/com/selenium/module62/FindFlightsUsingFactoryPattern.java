@@ -17,7 +17,7 @@ public class FindFlightsUsingFactoryPattern {
 
 	@BeforeClass
 	public void openBrowser() {
-		driver=DriverFactory.getBrowserInstance("Chrome");		
+		driver=DriverFactory.getBrowserInstance("firefox");		
 		driver.manage().window().maximize();
 		driver.get(START_URL);
 		findFlightsPage = new FindFlightsPage(driver);

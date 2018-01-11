@@ -2,10 +2,6 @@ package com.selenium.module62;
 
 import java.util.Properties;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.ie.InternetExplorerDriver;
-import org.openqa.selenium.remote.DesiredCapabilities;
 
 public class DriverFactory {
 	public static WebDriver driver;
@@ -13,17 +9,15 @@ public class DriverFactory {
 
 	public static WebDriver getBrowserInstance(String browserName) {
 		if (browserName.equalsIgnoreCase("Chrome")) {
-			System.setProperty("webdriver.chrome.driver", ".\\src\\resources\\chromedriver.exe");
-			driver = new ChromeDriver();
+			BrowserIntializer browserIntializer=new  ChromeBrowserIntializer();
+			driver=browserIntializer.intializeBrowser();
 			return driver;
 		} else if (browserName.equalsIgnoreCase("firefox")) {
-			System.setProperty("webdriver.gecko.driver", ".\\src\\resources\\geckodriver.exe");
-			driver = new FirefoxDriver();
+			BrowserIntializer browserIntializer=new  FireFoxDriverIntializer();
+			driver=browserIntializer.intializeBrowser();
 		} else if (browserName.equalsIgnoreCase("Internet Explorer")) {
-			System.setProperty("webdriver.ie.driver", ".\\src\\resources\\IEDriverServer.exe");
-			DesiredCapabilities capabilities = DesiredCapabilities.internetExplorer();
-			capabilities.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
-			driver = new InternetExplorerDriver(capabilities);
+			IEDriverInitializer inetBorwser = new IEDriverInitializer();
+			driver = inetBorwser.intializeBrowser();
 		}
 		return driver;
 	}
